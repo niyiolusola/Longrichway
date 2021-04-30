@@ -6,6 +6,7 @@
 @mytag
 Scenario: Valid Login
 	Given that the user navigates to "https://longrichway.com"
+	And the user clicks on OK to accept country
 	When the user clicks on Login button
 	And the user enters Email AddressLog "niyiolusola@outlook.com"
 	And the user enters Password for Login "akbncf8e"

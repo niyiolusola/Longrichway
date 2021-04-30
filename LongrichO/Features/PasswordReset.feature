@@ -7,6 +7,7 @@
 @mytag
 Scenario: Forgetten Password Reset
 	Given that the user navigates to "https://longrichway.com"
+	And the user clicks on OK to accept country
 	When the user clicks on Login button 
 	And the user enters Email AddressLog "user@yahoo.com"
 	And the user clicks on Lost your Password?

@@ -21,7 +21,7 @@ namespace LongrichO.Hooks
         {
             driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
             driver.Manage().Window.Maximize();
-            //driver.Manage().Timeouts().ImplicitWait = TimeSpan;
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
 
         [AfterScenario]

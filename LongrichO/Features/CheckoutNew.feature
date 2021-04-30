@@ -6,6 +6,7 @@
 @mytag
 Scenario: Verify new user can register at checkout
 	Given that the user navigates to "https://longrichway.com"
+	And the user clicks on OK to accept country
 	When the user clicks on Categories
 	And the user clicks "Feminine Care"
 	And the user selects preferred product

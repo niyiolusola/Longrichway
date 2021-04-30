@@ -1,4 +1,5 @@
-﻿using LongrichO.PageObjects;
+﻿using FluentAssertions;
+using LongrichO.PageObjects;
 using System;
 using TechTalk.SpecFlow;
 
@@ -11,6 +12,12 @@ namespace LongrichO.Steps
         public LoginSteps()
         {
             _loginPage = new LoginPage();
+        }
+
+        [Given(@"the user clicks on OK to accept country")]
+        public void GivenTheUserClicksOnOKToAcceptCountry()
+        {
+            _loginPage.ClickOk();
         }
 
         [When(@"the user enters Email AddressLog ""(.*)""")]
@@ -40,7 +47,7 @@ namespace LongrichO.Steps
         [Then(@"the user account checkout is displayed")]
         public void ThenTheUserAccountCheckoutIsDisplayed()
         {
-            _loginPage.CheckOutIsDisplayed();
+            _loginPage.CheckOutIsDisplayed().Should().BeTrue();
         }
 
 
